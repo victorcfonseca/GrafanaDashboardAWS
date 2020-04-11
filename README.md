@@ -4,13 +4,15 @@ A ideia desse projeto é criar um painel à vista que dá uma visão macro da in
 
 Vale ressaltar que será necessário o Zabbix e o Grafana, além de conhecimento nestas ferramentas para que a estrutura fique funcional.
 
+![](/img/Grafana.JPG)
+
 ## Diretórios:
 
 ### Grafana
 
-Contém o JSON do Dashboard e deve ser importado em seu Grafana.
+* Contém o JSON do Dashboard e deve ser importado em seu Grafana.
 
 ### Zabbix
 
-- Contém o arquivo de UserParameter utilizado pelo Zabbix Agent para coletar métricas da AWS.
-- Contém uma imagem PNG de como se deve configurar um item dentro de um Host no Zabbix para buscar através do UserParameter.
+* Contém o arquivo de UserParameter utilizado pelo Zabbix Agent para coletar métricas da AWS.
+* Contém uma imagem PNG de como se deve configurar um item dentro de um Host no Zabbix para buscar através do UserParameter.
