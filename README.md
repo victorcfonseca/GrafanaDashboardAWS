@@ -12,5 +12,5 @@ Contém o JSON do Dashboard e deve ser importado em seu Grafana.
 
 ### Zabbix
 
-Contém o arquivo de UserParameter utilizado pelo Zabbix Agent para coletar métricas da AWS.
-Contém uma imagem PNG de como se deve configurar um item dentro de um Host no Zabbix para buscar através do UserParameter.
+- Contém o arquivo de UserParameter utilizado pelo Zabbix Agent para coletar métricas da AWS.
+- Contém uma imagem PNG de como se deve configurar um item dentro de um Host no Zabbix para buscar através do UserParameter.
