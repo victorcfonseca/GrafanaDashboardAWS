@@ -1,8 +1,8 @@
 # GrafanaDashboardAWS
 
-A ideia desse projeto é criar um painel à vista que apresenta uma visão macro da infraestrutura AWS utilizada com alguns itens de compliance e governança. Para que funcione é necessário ter instalado em sua infraestrutura um Zabbix e um Grafana.
+A ideia desse projeto é criar um painel à vista que dá uma visão macro da infraestrutura AWS utilizada com alguns itens de compliance e governança. Em resumo, o Zabbix coleta as informações e as armazena em sua base de dados. Daí, o Grafana acessa essas informações e exibe em seu painel.
 
-Vale ressaltar que será necessário conhecimento em Zabbix e Grafana para que a estrutura fique funcional.
+Vale ressaltar que será necessário o Zabbix e o Grafana, além de conhecimento nestas ferramentas para que a estrutura fique funcional.
 
 ## Diretórios:
 
