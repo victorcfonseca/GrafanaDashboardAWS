@@ -14,6 +14,6 @@ Vale ressaltar que será necessário ter instalado o Zabbix e o Grafana, além d
 
 ### Zabbix
 
-* zbx_export_templates.xml: arquivo de Template do Zabbix com os itens a serem coletados e de acordo com as configurações feitas no Grafana.
+* zbx_export_templates.xml: arquivo de Template do Zabbix com os itens a serem coletados e de acordo com as configurações feitas no Grafana. Será necessário importar este template no seu Zabbix e vincular ao item criado para fazer as coletas na AWS.
 * userparameter_aws.conf:  arquivo de UserParameter utilizado pelo Zabbix Agent para coletar métricas da AWS.
 * Contém uma imagem PNG de como se deve configurar um item dentro de um Host no Zabbix para buscar através do UserParameter.
