@@ -24,6 +24,6 @@ Vale ressaltar que será necessário ter instalado o Zabbix e o Grafana, além d
 * Caso tenha novas ideias ou um meio de aprimorar esse dashboard, podemos tentar ajudar.
 
 Estes são os nossos contatos:
-Victor Fonseca: https://www.linkedin.com/in/victorcfonseca/
-Rafael Vinícius: https://www.linkedin.com/in/rafael-vin%C3%ADcius-cardoso-j%C3%BAlio-55087b50/
+* Victor Fonseca: https://www.linkedin.com/in/victorcfonseca/
+* Rafael Vinícius: https://www.linkedin.com/in/rafael-vin%C3%ADcius-cardoso-j%C3%BAlio-55087b50/
 
