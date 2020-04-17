@@ -1,0 +1,35 @@
+###########S3 Sem Encriptar###
+*/120 * * * * zabbix_sender -z 127.0.0.1 -s "aws.prd" -k s3..prd.without.encrypt -o $(/etc/zabbix/scripts/aws-s3-encrypt-prd.sh)
+
+###########Bucket S3 Sem TAG#####
+*/120 * * * * zabbix_sender -z 127.0.0.1 -s "aws.prd" -k aws.prd.s3.without.tag -o $(/etc/zabbix/scripts/aws-s3-without-tag-prd.sh)
+
+###SNS PRD Sem TAG###
+*/120 * * * * zabbix_sender -z 127.0.0.1 -s "aws.prd" -k aws.prd.sns.without.tag -o $(/etc/zabbix/scripts/aws-sns-without-tag-prd.sh)
+
+###SQS PRD Sem TAG###
+*/120 * * * * zabbix_sender -z 127.0.0.1 -s "aws.prd" -k aws.prd.sqs.without.tag -o $(/etc/zabbix/scripts/aws-sqs-without-tag-prd.sh)
+
+####Lambda PRD Sem TAG####
+*/120 * * * * zabbix_sender -z 127.0.0.1 -s "aws.prd" -k aws.prd.lambda.without.tag -o $(/etc/zabbix/scripts/aws-lambda-without-tag-prd.sh)
+
+####elbv2 Loadbalancer Application Sem Tag - PRD
+*/120 * * * * zabbix_sender -z 127.0.0.1 -s "aws.prd" -k aws.prd.elbv2.without.tag -o $(/etc/zabbix/scripts/aws-elbv2-without-tag-prd.sh)
+
+####elb Loadbalancer Classic Sem Tag - PRD
+*/120 * * * * zabbix_sender -z 127.0.0.1 -s "aws.prd" -k aws.prd.elb.without.tag -o $(/etc/zabbix/scripts/aws-elb-without-tag-prd.sh)
+
+####Nó Redis sem TAG###
+*/120 * * * * zabbix_sender -z 127.0.0.1 -s "aws.prd" -k aws.prd.redis.without.tag -o $(/etc/zabbix/scripts/aws-redis-without-tag-prd.sh)
+
+####Verifica Lambda PRD que não foram executadas nos ultimos 30 dias####
+*/120 * * * * zabbix_sender -z 127.0.0.1 -s "aws.prd" -k aws.prd.verifica.lambda.30 -o $(/etc/zabbix/scripts/aws-verifica-lambdas.sh prd 30)
+
+####Verifica Lambda PRD que não foram executadas nos ultimos 90 dias####
+*/120 * * * * zabbix_sender -z 127.0.0.1 -s "aws.prd" -k aws.prd.verifica.lambda.90 -o $(/etc/zabbix/scripts/aws-verifica-lambdas.sh prd 90)
+
+####Verifica Lambda PRD que não foram executadas nos ultimos 180 dias####
+*/120 * * * * zabbix_sender -z 127.0.0.1 -s "aws.prd" -k aws.prd.verifica.lambda.180 -o $(/etc/zabbix/scripts/aws-verifica-lambdas.sh prd 180)
+
+####Verifica S3 public PRD####
+*/120 * * * * zabbix_sender -z 127.0.0.1 -s "aws.prd" -k aws.prd.verifica.s3.public -o $(/etc/zabbix/scripts/aws-check-s3-public.sh prd)
