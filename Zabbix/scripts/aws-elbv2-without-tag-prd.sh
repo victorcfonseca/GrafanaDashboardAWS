@@ -9,21 +9,21 @@
 
 declare -i count='0'
 #declare -i count_total='0'
-lista=$(aws s3 ls | cut -c20-200 | wc -l)
-for OUTPUT in $(aws s3 ls | cut -c20-400)
+lista=$(aws elbv2 describe-load-balancers  --query 'LoadBalancers[*].LoadBalancerArn' | grep -v "\[" | grep -v "\]" | sed -e 's/\"//g' | sed -e 's/\,//g' | wc -l)
+for OUTPUT in $(aws elbv2 describe-load-balancers  --query 'LoadBalancers[*].LoadBalancerArn' | grep -v "\[" | grep -v "\]" | sed -e 's/\"//g' | sed -e 's/\,//g')
 do
     
 crypt=""
-crypt=$(aws s3api get-bucket-encryption --bucket $OUTPUT 2> /dev/null)
+crypt=$(aws elbv2 describe-tags --resource-arns  $OUTPUT 2> /dev/null)
 
 
-if [[ $crypt =~ "AES256" || $crypt =~ "aws:kms" ]];
+if [[ $crypt =~ "Tribo" ]];
     then
 
-#echo -e '\033[05;32mTem Criptografia - Bucket Name: '$OUTPUT'\033[00;37m' 
+#echo -e '\033[05;32mTem Tag Tribo - LoadBalancer Name: '$OUTPUT'\033[00;37m' 
 count=$count+1 
     #else
-#echo -e '\033[05;31mNão Tem Criptografia - Bucket Name: '$OUTPUT'\033[00;37m'    
+#echo -e '\033[05;31mNão Tem Tag Tribo - LoadBalancer Name: '$OUTPUT'\033[00;37m'    
 
 
 fi
